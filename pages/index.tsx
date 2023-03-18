@@ -1,8 +1,9 @@
-import Link from 'next/link';
 import Logo from '../components/assets/logo/Logo';
 import { Layout } from '../components/layout/Layout';
 import { useCategories } from '../lib/services/categories.services';
 
+import Category from '../components/filters/category';
+import Search from '../components/search/Search';
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
@@ -18,22 +19,8 @@ const Home: NextPageWithLayout = () => {
           <Logo />
         </div>
         <div className="flex flex-col gap-4">
-          <input
-            className="px-6 py-4 rounded-3xl w-full sm:w-[465px]"
-            type="text"
-            placeholder="¿Qué quieres ver en tu ciudad?"
-          />
-          <div className="flex items-center justify-center gap-2">
-            <Link href={'/category/marcas-y-tiendas'}>
-              <button>Marcas y tiendas</button>
-            </Link>
-            <Link href={'/category/marcas-y-tiendas'}>
-              <button>Artistas y conciertos</button>
-            </Link>
-            <Link href={'/category/marcas-y-tiendas'}>
-              <button>Torneos</button>
-            </Link>
-          </div>
+          <Search />
+          <Category />
         </div>
       </div>
       {/* CONTENIDO */}
