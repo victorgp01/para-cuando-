@@ -9,6 +9,7 @@ type FormValues = {
   userName: string;
   password: string;
 };
+
 export default function SingUpPage() {
   const { register, handleSubmit } = useForm({
     defaultValues: {

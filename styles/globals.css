@@ -6,6 +6,26 @@
   html {
     font-family: 'Roboto', sans-serif;
   }
+  h1 {
+    @apply app-title-1;
+  }
+  h2 {
+    @apply app-title-2;
+  }
+  h3 {
+    @apply app-title-3;
+  }
+  h4 {
+    @apply app-subtitle-1;
+  }
+  h5 {
+    @apply app-subtitle-2;
+  }
+  p,
+  li,
+  span {
+    @apply app-text-1;
+  }
 }
 
 @layer components {
@@ -15,7 +35,24 @@
   .app-title-1 {
     @apply font-black text-5xl leading-[56px] font-Roboto;
   }
-
+  .app-subtitle-1 {
+    @apply font-Roboto not-italic font-medium text-base;
+  }
+  .app-title-2 {
+    @apply font-Roboto not-italic font-medium text-2xl;
+  }
+  .app-subtitle-2 {
+    @apply font-Roboto not-italic font-normal text-base;
+  }
+  .app-title-3 {
+    @apply font-Roboto not-italic font-semibold text-xl;
+  }
+  .app-text-1 {
+    @apply font-Roboto not-italic font-normal text-sm;
+  }
+  .app-text-2 {
+    @apply font-Roboto not-italic font-medium text-xs;
+  }
   .app-banner {
     @apply w-screen m-auto relative left-[calc(-50vw_+_50%)];
   }
